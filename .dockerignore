@@ -1,0 +1,14 @@
+.git
+node_modules
+.next
+dist
+data
+.fresh-data
+core-plugins
+.core-plugins-*
+public/plugin-authoring
+plugins/*/node_modules
+auth.json
+*-credentials.json*
+.env
+.env.*

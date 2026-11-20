@@ -1,0 +1,16 @@
+name: Publish image
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    if: github.repository_owner == 'watacoso'
+    uses: watacoso/homelab-iac/.github/workflows/publish-app.yml@main
+    permissions: { contents: read, packages: write }
+    with:
+      image: learnharness
+      platforms: linux/amd64
